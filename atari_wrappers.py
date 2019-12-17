@@ -104,8 +104,7 @@ class FrameStack(gym.Wrapper):
     def _get_ob(self):
         assert len(self.frames) == self.k
         return LazyFrames(list(self.frames))
-
-
+        
 
 def process_frame(frame, width, height, normalize=False):
     img = frame.astype(np.uint8)
